@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Remove Photo Metadata Online | Free EXIF & GPS Cleaner</title>
+    <meta name="description" content="Safely remove EXIF data, GPS location, and camera tags from your photos online. 100% private: images are processed locally in your browser and never uploaded to any server.">
+    <meta name="keywords" content="remove exif data, clear photo metadata, delete gps location from image, photo privacy shield, jpeg cleaner">
+    
+    <style>
+        body { font-family: sans-serif; background: #f4f7f6; padding: 40px 20px; text-align: center; color: #333; }
+        
+        /* Главная обертка */
+        .wrapper { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+        
+        /* Основная карточка приложения - теперь всегда первая */
+        .container { width: 100%; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); box-sizing: border-box; margin-bottom: 40px; }
+        .drop-zone { border: 2px dashed #ccc; padding: 40px; border-radius: 6px; cursor: pointer; margin-bottom: 20px; background: #fafafa; transition: 0.3s; }
+        .drop-zone:hover { border-color: #007bff; background: #f0f7ff; }
+        button { background: #007bff; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-size: 16px; display: none; margin: 15px auto; font-weight: bold; }
+        button:hover { background: #0056b3; }
+        
+        /* Стили для SEO-блока, который ушел вниз */
+        .seo-section { width: 100%; text-align: left; line-height: 1.6; box-sizing: border-box; }
+        .seo-section h2 { color: #222; font-size: 20px; margin-top: 25px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .seo-section p, .seo-section li { color: #555; font-size: 14px; }
+        .seo-section ul { padding-left: 20px; }
+        .badge { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 12px; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="container">
+        <span class="badge">🔒 100% Client-Side & Private</span>
+        <h1 style="font-size: 26px; margin: 10px 0;">Photo EXIF Cleaner</h1>
+        <p style="color: #666; font-size: 15px; margin-bottom: 25px;">Protect your privacy. Strip hidden GPS location, camera models, and camera tags locally inside your browser before sharing.</p>
+        
+        <div class="drop-zone" id="dropZone">
+            <strong>Click or Drag & Drop your JPG image here</strong>
+            <p style="font-size: 12px; color: #777; margin: 5px 0 0 0;">Supports original JPEG/JPG formats</p>
+            <input type="file" id="fileInput" accept="image/jpeg" style="display: none;">
+        </div>
+        
+        <div id="status"></div>
+        <button id="downloadBtn">Download Clean Image</button>
+    </div>
+
+    <div class="seo-section">
+        <h2>Why Should You Clear Photo Metadata?</h2>
+        <p>When you take a photo with a smartphone or digital camera, it saves hidden information called <strong>EXIF data</strong>. This includes your exact GPS coordinates, date, time, and device serial numbers. Sharing these images on classified sites (like Craigslist or eBay), forums, or via email can accidentally leak your home address and daily routines to strangers.</p>
+
+        <h2>Why Our Metadata Remover is Safer</h2>
+        <p>Unlike other online tools, our <strong>Free EXIF Cleaner</strong> works entirely on the client side. Your photos are never uploaded to any external server. The metadata extraction and removal process happen right inside your web browser. You can even use this tool completely offline!</p>
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <ul>
+            <li><strong>Does Twitter or Instagram remove EXIF?</strong> Yes, major social networks strip metadata upon upload. However, email attachments, iMessage, and cloud drives (Google Drive/Dropbox) preserve original data.</li>
+            <li><strong>What data gets deleted?</strong> Our tool completely strips GPS latitude/longitude, camera model, lens specifications, software versions, and creation timestamps.</li>
+            <li><strong>Is it free?</strong> Yes, this photo privacy tool is completely free with no file size limits or registration required.</li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="piexif.min.js"></script>
+<script src="exif.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
